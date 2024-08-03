@@ -1,0 +1,102 @@
+/* Adjustments to achieve desired layout */
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  padding: 20px; /* Decreased padding for small screens */
+}
+
+.signup-content {
+  display: flex;
+  flex-direction: column; /* Stack content vertically on small screens */
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Decreased padding for small screens */
+  width: 90%; /* Adjust the width to your preference */
+
+  @media (min-width: 768px) {
+    /* Styles for screens wider than 768px */
+    flex-direction: row; /* Revert to horizontal layout */
+    justify-content: space-between; /* Space out elements horizontally */
+    align-items: center;
+    padding: 40px; /* Increased padding for larger screens */
+  }
+}
+
+.signup-image {
+  flex: 1;
+  display: block; /* Show the image on all screens */
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    /* Hide the image on small screens */
+    display: none;
+  }
+}
+
+.signup-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      flex: 1;
+      margin: 5px;
+
+      @media (max-width: 768px) {
+        width: 100%; /* Make inputs full width on small screens */
+      }
+    }
+
+    button.login-button {
+      background-image: linear-gradient( 129.1deg,  rgba(243,199,83,1) 26.8%, rgba(18,235,207,1) 114.1% );
+      border-radius: 20px;
+      width: 200px; /* Make the button full width on small screens */
+      font-size: 25px;
+      font-weight: bold;
+      border: 1px solid white;
+      color: #fff;
+
+      /* Hover effect */
+      background-image: linear-gradient( 129.1deg,  rgba(243,199,83,1) 26.8%, rgba(18,235,207,1) 114.1% );
+    }
+  }
+
+  p {
+    margin-top: 15px;
+    text-align: center;
+
+    a {
+      color: #007bff;
+    }
+  }
+}

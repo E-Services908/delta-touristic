@@ -1,0 +1,121 @@
+/* Default styles for larger screens */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  padding: 50px;
+  width: 100%;
+}
+
+.login-content {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px; /* Increase padding for a larger container */
+  width: 80%; /* Expand to full width */
+}
+
+.login-image {
+  flex: 1;
+  padding: 20px;
+
+  img {
+    max-width: 100%;
+    width: 400px; /* Increase image size */
+    height: auto;
+  }
+}
+
+.login-form {
+  flex: 1;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    .input-container {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center; /* Vertically center the icon and input */
+    }
+    
+    .input-container input {
+      flex: 1; /* Allow the input to take up remaining space */
+      margin: 0;
+      padding: 10px;
+      border: none;
+      border-radius: 1px;
+      font-size: 16px;
+      outline: none; /* Remove input focus outline */
+    }
+    
+    .input-container .input-icon {
+      padding: 10px; /* Adjust padding for icon container */
+      color: black;
+    }
+    
+   
+
+    button.login-button {
+     
+      background-image: linear-gradient( 129.1deg,  rgba(243,199,83,1) 26.8%, rgba(18,235,207,1) 114.1% );
+      border-radius: 20px;
+      width: 100%; /* Take up the full width */
+      font-size: 25px;
+      font-weight: bolder;
+      border: 1px solid white;
+      color: #fff;
+    }
+  }
+
+  p {
+    margin-top: 15px;
+    text-align: center;
+
+    a {
+      color: #007bff;
+    }
+  }
+}
+
+/* Responsive styles for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 0px;
+    width: 100%; 
+    background-color: #fff;
+  }
+
+  .login-content {
+    flex-direction: column;
+    padding: 40px; 
+  }
+
+  .login-image {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .login-image img {
+    width: 100%; /* Make the image full-width on mobile */
+  }
+
+  .login-form {
+    padding: 0px;
+  }
+
+  /* Adjust button width for mobile */
+  .login-form form button.login-button {
+    width: 100%;
+  }
+}

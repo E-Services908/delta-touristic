@@ -1,0 +1,51 @@
+/* SearchHome.scss */
+.search-home-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  background-color: #ffff;
+  border: none;
+
+
+.search-home-content {
+  background-color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeInUp 0.5s ease;
+  .top-text {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+
+    h3 {
+      display: inline-block;
+      padding-bottom: 0.25rem;
+      font-size: 30px;
+      font-weight: 900;
+      
+    }
+
+    &:hover {
+      color: #f9c221; /* Change color on hover */
+    }
+
+    &:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50px;
+      transform: translateX(-50%);
+      border-bottom: 2px solid #f9c221;
+    }
+  }
+}
+}

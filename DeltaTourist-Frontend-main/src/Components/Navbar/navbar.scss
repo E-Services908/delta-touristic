@@ -1,0 +1,231 @@
+:root {
+    --primaryColor: hsl(39, 100%, 45%);
+    /* Golden */
+    --SecondaryColor: hsl(30, 85%, 53%);
+    /* Lighter golden */
+    --gradientColor: linear-gradient(90deg, hsla(39, 67%, 56%, 1) 0%, hsla(30, 74%, 51%, 1) 100%);
+    /* Gradient with golden tones */
+    --whiteColor: hsl(40, 90%, 95%);
+    /* Light cream */
+    --blackColor: hsl(30, 33%, 16%);
+    /* Dark brown */
+    --textColor: hsl(30, 70%, 30%);
+    /* Brownish text color */
+    --whiteColorDeam: hsl(40, 80%, 88%);
+    /* Light golden cream */
+    --grayText: rgb(190, 190, 190);
+    /* Keep gray as is */
+    --inputColor: rgb(209, 168, 120);
+    /* Brownish input color */
+    --bodyColor: rgb(213, 188, 138);
+    /* Light brownish background */
+    --cardBG: rgb(192, 166, 116);
+    /* Darker brown for card background */
+}
+
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    padding: 0.5rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    margin-bottom: 400px;
+    height: 80px;
+
+    .logoDiv {
+        width: 200px;
+        height: auto;
+
+        .logo {
+            margin-top: -20px;
+            color: var(--blackColor);
+            font-weight: 600;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            .imgLogo {
+                width: 200px;
+                height: 40%;
+                background: transparent;
+            }
+
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .navBar {
+            position: absolute;
+            background: var(--whiteColorDeam);
+            height: max-content;
+            width: 80%;
+            border-radius: 1rem;
+            top: -500rem;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 2000;
+            box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+            transition: 0.3s ease-in-out;
+            padding: 1rem;
+
+            .navlists {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+                padding: 0.5rem 0;
+            }
+
+            .navItem {
+                padding: 0.5rem 0;
+
+
+
+                .navLink {
+                    position: relative;
+                    /* Create a relative positioning context for pseudo-element */
+                    text-decoration: none;
+                    color: var(--textColor);
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    padding-bottom: 5px;
+                    /* Add some spacing for the bottom border */
+                }
+
+
+
+
+            }
+
+            .btn {
+                margin-top: 1rem;
+
+
+                a {
+                    font-weight: 600;
+                    color: var(--whiteColor);
+                }
+
+                &:hover {
+                    background: linear-gradient(90deg, hsla(179, 57%, 56%, 1) 0%, hsla(238, 64%, 51%, 1) 100%);
+                    ;
+
+                }
+            }
+
+            .closeNavbar {
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+                color: var(--primaryColor);
+
+                &:hover {
+                    color: var(--SecondaryColor);
+                }
+            }
+        }
+
+        .activeNavBar {
+            top: 7rem;
+        }
+
+    }
+
+    .toggleNavbar {
+        .icon {
+            font-size: 35px;
+            color: var(--primaryColor);
+            transform: translateY(7px);
+            margin-top: -20px;
+        }
+
+        &:hover.icon {
+            color: var(--SecondaryColor)
+        }
+    }
+
+}
+
+//Media Querires ======================>
+@media screen and (min-width:769px) {
+
+    .toggleNavbar,
+    .closeNavbar {
+        display: none;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+
+        .navBar {
+            .navlists {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+
+                .navItem {
+                    .navLink {
+                        color: var(--textColor);
+                        padding: 0 0.45rem;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        padding: 10px;
+
+                        &:hover {
+                            color: var(--primaryColor);
+                            background: #f9c221;
+                            border-radius: 10px;
+                            color: aliceblue;
+                        }
+
+                        .WishlistIcon {
+                            font-size: 25px;
+                        }
+
+                        .WishlistIcon:hover {
+                            font-size: 25px;
+                        }
+
+                    }
+                }
+
+                .btn {
+                    margin-left: 1rem;
+
+                    a {
+                        color: var(--whiteColor);
+                        font-weight: 500;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width:960px) {
+    .header {
+        .navBar {
+            .navlists {
+                .navItem {
+                    padding: 0 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1240px) {
+    .header {
+        padding: 1rem 8.5rem;
+    }
+}

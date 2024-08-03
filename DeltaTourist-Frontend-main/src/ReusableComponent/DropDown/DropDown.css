@@ -1,0 +1,40 @@
+/* CustomDropdown.css or CustomDropdown.scss */
+.custom-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1; /* Ensure it appears above other content */
+  }
+  
+  .custom-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-dropdown li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .custom-dropdown {
+      max-height: 200px; /* Adjust the max height for smaller screens */
+    }
+  
+    .custom-dropdown li {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      padding: 8px; /* Adjust padding for smaller screens */
+    }
+  }
+  
